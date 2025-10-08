@@ -7,7 +7,10 @@ export default defineConfig({
     plugins: [
         react(),
         keycloakify({
-            accountThemeImplementation: "none"
+            accountThemeImplementation: "none",
+            startKeycloakOptions: {
+                dockerImage: 'quay.io/keycloak/keycloak:26.3.4'
+            }
         })
     ]
 });
